@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>GMOオフィスサポート株式会社様 SEOご提案まとめ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1a2b56;
+    --navy-dark:#0f1a38;
+    --teal:#0f766e;
+    --teal-light:#e6f5f3;
+    --coral:#d9534f;
+    --coral-light:#fdecea;
+    --text-primary:#222222;
+    --text-secondary:#5f5e5a;
+    --border:#e2e2e0;
+    --bg-page:#f5f6f8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+    background:var(--bg-page);
+    color:var(--text-primary);
+    line-height:1.7;
+  }
+  .page{
+    max-width:1040px;
+    margin:0 auto;
+    padding:0 20px 60px;
+  }
+  header.top{
+    background:var(--navy);
+    color:#ffffff;
+    padding:32px 20px;
+    margin-bottom:24px;
+  }
+  header.top .inner{
+    max-width:1000px;
+    margin:0 auto;
+  }
+  header.top .company{
+    font-size:14px;
+    opacity:0.85;
+    margin:0 0 6px;
+  }
+  header.top h1{
+    font-size:26px;
+    font-weight:700;
+    margin:0 0 10px;
+  }
+  header.top .slogan{
+    font-size:16px;
+    font-weight:500;
+    color:#ffe08a;
+    margin:0 0 10px;
+  }
+  header.top .date{
+    font-size:13px;
+    opacity:0.7;
+    margin:0;
+  }
+  .hero-wrap{
+    margin-bottom:28px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 1px 4px rgba(0,0,0,0.08);
+  }
+  .hero-wrap img{
+    width:100%;
+    display:block;
+  }
+  nav.tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:24px;
+    flex-wrap:wrap;
+  }
+  nav.tabs button{
+    flex:1;
+    min-width:160px;
+    padding:14px 18px;
+    font-size:15px;
+    font-weight:700;
+    font-family:inherit;
+    border-radius:8px;
+    border:2px solid transparent;
+    cursor:pointer;
+    background:#ffffff;
+    color:var(--text-secondary);
+    border-color:var(--border);
+    transition:all 0.15s ease;
+  }
+  nav.tabs button.tab-1{ color:var(--navy); border-color:var(--navy); }
+  nav.tabs button.tab-1.active{ background:var(--navy); color:#ffffff; }
+  nav.tabs button.tab-2{ color:var(--teal); border-color:var(--teal); }
+  nav.tabs button.tab-2.active{ background:var(--teal); color:#ffffff; }
+  nav.tabs button.tab-3{ color:var(--coral); border-color:var(--coral); }
+  nav.tabs button.tab-3.active{ background:var(--coral); color:#ffffff; }
+
+  section.panel{
+    display:none;
+    background:#ffffff;
+    border-radius:12px;
+    border:0.5px solid var(--border);
+    padding:28px 28px 32px;
+  }
+  section.panel.active{ display:block; }
+
+  .section-title{
+    font-size:19px;
+    font-weight:700;
+    color:var(--text-primary);
+    margin:0 0 6px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--border);
+  }
+  .section-sub{
+    font-size:14px;
+    color:var(--text-secondary);
+    margin:0 0 20px;
+  }
+
+  /* ---- Tab1: 役務内容 card grid ---- */
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:16px;
+  }
+  .service-card{
+    background:#fafbfc;
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .service-card .card-head{
+    background:var(--navy);
+    color:#ffffff;
+    padding:10px 16px;
+    font-size:15px;
+    font-weight:700;
+  }
+  .service-card .card-body{
+    padding:14px 16px;
+  }
+  .badge-row{
+    display:flex;
+    gap:6px;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+  }
+  .badge{
+    font-size:12px;
+    padding:3px 10px;
+    border-radius:20px;
+    background:var(--teal-light);
+    color:var(--teal);
+    font-weight:500;
+  }
+  .service-card p.desc{
+    font-size:14px;
+    color:var(--text-secondary);
+    margin:0;
+  }
+
+  /* ---- Tab2: roadmap table ---- */
+  .table-scroll{
+    overflow-x:auto;
+    border:1px solid var(--border);
+    border-radius:10px;
+  }
+  table.roadmap{
+    border-collapse:collapse;
+    width:100%;
+    min-width:960px;
+    font-size:13px;
+  }
+  table.roadmap th, table.roadmap td{
+    border:1px solid var(--border);
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+  }
+  table.roadmap th{
+    background:var(--teal);
+    color:#ffffff;
+    font-weight:700;
+    position:sticky;
+    top:0;
+    font-size:13px;
+  }
+  table.roadmap td.row-label{
+    background:#f2f7f6;
+    font-weight:700;
+    color:var(--teal);
+    white-space:nowrap;
+  }
+  table.roadmap td.filled{
+    background:#eef7f5;
+  }
+  .roadmap-note{
+    font-size:13px;
+    color:var(--text-secondary);
+    margin-top:12px;
+  }
+
+  /* ---- Tab3: contract terms ---- */
+  .contract-card{
+    max-width:600px;
+    background:#fafbfc;
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .contract-card .card-head{
+    background:var(--coral);
+    color:#ffffff;
+    padding:10px 16px;
+    font-size:15px;
+    font-weight:700;
+  }
+  table.contract{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+  }
+  table.contract tr td{
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+  }
+  table.contract tr:last-child td{
+    border-bottom:none;
+  }
+  table.contract td.label{
+    color:var(--text-secondary);
+    width:38%;
+  }
+  table.contract td.value{
+    font-weight:500;
+    text-align:right;
+  }
+  table.contract td.value .note{
+    display:block;
+    font-size:12px;
+    font-weight:400;
+    color:var(--text-secondary);
+    margin-top:2px;
+  }
+
+  footer.foot{
+    margin-top:32px;
+    padding-top:16px;
+    border-top:1px solid var(--border);
+    font-size:12px;
+    color:var(--text-secondary);
+    text-align:center;
+  }
+
+  @media (max-width:640px){
+    header.top h1{ font-size:20px; }
+    section.panel{ padding:20px 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="inner">
+    <p class="company">GMOオフィスサポート株式会社 御中</p>
+    <h1>SEOコンサルティングのご提案 まとめ</h1>
+    <p class="slogan">刈り取ってきた顕在層から、育てる潜在層へ。</p>
+    <p class="date">2026年5月14日</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <div class="hero-wrap">
+    <img src="hero.png" alt="ゴール：月間送客数を67件から257件へ（約3.8倍）。クライアントの課題（顕在層は刈り取り済み・潜在層に届いていない・記事資産が活きていない）とGMO TECHが返す価値（潜在層向けキーワード設計・記事資産のCTA最適化・新サービスへの導線構築）を対比した図解。">
+  </div>
+
+  <nav class="tabs">
+    <button class="tab-1 active" onclick="showTab(0, this)">役務内容・施策範囲</button>
+    <button class="tab-2" onclick="showTab(1, this)">ロードマップ案</button>
+    <button class="tab-3" onclick="showTab(2, this)">契約条件</button>
+  </nav>
+
+  <section class="panel active" id="panel-0">
+    <p class="section-title">提供役務</p>
+    <p class="section-sub">貴社のKPI・事業方針に合わせて役務を柔軟に組み合わせて提供します。実施頻度は初期設定値であり、分析結果に応じて随時見直します。</p>
+    <div class="card-grid">
+
+      <div class="service-card">
+        <div class="card-head">月次レポートの作成</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">月1回</span><span class="badge">レポーティング</span></div>
+          <p class="desc">施策の進捗と成果を可視化し、次のアクションに繋げる</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-head">定例会の実施</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">月1回</span><span class="badge">コミュニケーション</span></div>
+          <p class="desc">施策の方向性を共有し、貴社との認識を揃える</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-head">キーワード調査・戦略立案</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">半期1回</span><span class="badge">戦略設計</span></div>
+          <p class="desc">注力すべきキーワードと施策の優先順位を設計する</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-head">新規記事構成案の作成</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">月8〜10本</span><span class="badge">戦略設計</span></div>
+          <p class="desc">競合が獲得しているキーワードなど記事の構成案の作成</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-head">既存記事のリライト</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">月8〜10本</span><span class="badge">コンテンツ改善</span></div>
+          <p class="desc">既存資産の品質を高め、流入・送客の改善を図る</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-head">内部リンク最適化</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">3ヶ月に1回</span><span class="badge">導線改善</span></div>
+          <p class="desc">記事からサービスページへの送客率を高める</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-head">外部対策（被リンク）</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">半期1回</span><span class="badge">外部施策</span></div>
+          <p class="desc">サイト全体の権威性を高め、順位上昇を促進する</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-head">テクニカルSEO改善</div>
+        <div class="card-body">
+          <div class="badge-row"><span class="badge">半期1回</span><span class="badge">テクニカル</span></div>
+          <p class="desc">サイトの技術的な問題を解消し、検索評価を向上させる</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="panel" id="panel-1">
+    <p class="section-title">1年間ロードマップ</p>
+    <p class="section-sub">キックオフから戦略策定・合意を第一フェーズとし、以降はコンテンツSEOを中心に新規記事制作・既存記事リライトを継続的に展開します。外部対策・CRO対策を適切なタイミングで加えながら、定例会・追加MTGを通じて進捗を共有し、伴走する形で進めます。</p>
+    <div class="table-scroll">
+      <table class="roadmap">
+        <thead>
+          <tr>
+            <th>分類</th>
+            <th>2026年7月</th>
+            <th>8月</th>
+            <th>9月</th>
+            <th>10月</th>
+            <th>11月</th>
+            <th>12月</th>
+            <th>2027年1月</th>
+            <th>2月</th>
+            <th>3月</th>
+            <th>4月</th>
+            <th>5月</th>
+            <th>6月</th>
+            <th>7月〜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">戦略設計</td>
+            <td class="filled">キックオフ<br>戦略提示</td>
+            <td class="filled">市場調査・競合調査・KW調査・アクセス解析・内部/外部分析・UIUX調査 → 戦略策定・合意</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td>次期提案により変動</td>
+          </tr>
+          <tr>
+            <td class="row-label">テクニカルSEO</td>
+            <td></td>
+            <td class="filled">サイト横断課題の整理<br>内部関連ルール設計</td>
+            <td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td>
+            <td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="row-label">コンテンツSEO</td>
+            <td></td><td></td>
+            <td class="filled">新規記事構成案の提示</td>
+            <td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="row-label">（同上）</td>
+            <td></td><td></td>
+            <td class="filled">既存記事のリライト</td>
+            <td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="row-label">外部対策</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td class="filled">リンクリスト提示</td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="row-label">その他</td>
+            <td></td><td></td><td></td>
+            <td class="filled">CRO対策</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="row-label">コミュニケーション</td>
+            <td class="filled">定例会</td>
+            <td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td><td class="filled">継続</td>
+            <td class="filled">継続</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="roadmap-note">※ 定例会・質疑対応は、都度必要に応じて追加MTGを実施いたします。</p>
+  </section>
+
+  <section class="panel" id="panel-2">
+    <p class="section-title">契約内容</p>
+    <p class="section-sub">貴社との契約に関する基本事項を整理しました。費用・成果物・契約条件については本内容をたたき台として、詳細についてすり合わせを進めさせてください。</p>
+    <div class="contract-card">
+      <div class="card-head">提供役務（概要）</div>
+      <table class="contract">
+        <tr>
+          <td class="label">契約期間</td>
+          <td class="value">2026年7月1日 〜 2027年6月30日<span class="note">（1年間）</span></td>
+        </tr>
+        <tr>
+          <td class="label">月額費用</td>
+          <td class="value">50万円（税抜）</td>
+        </tr>
+        <tr>
+          <td class="label">支払い条件</td>
+          <td class="value">月末締め翌月末払い</td>
+        </tr>
+        <tr>
+          <td class="label">成果物</td>
+          <td class="value">月次レポート・記事構成案<span class="note">改善提案資料・KWリスト など</span></td>
+        </tr>
+        <tr>
+          <td class="label">定例会</td>
+          <td class="value">月1回</td>
+        </tr>
+        <tr>
+          <td class="label">連絡手段</td>
+          <td class="value">Slack ／ メール</td>
+        </tr>
+        <tr>
+          <td class="label">更新</td>
+          <td class="value">自動更新<span class="note">解約は終了1ヶ月前にご連絡</span></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <footer class="foot">
+    出典：GMOオフィスサポート株式会社様向けSEOコンサルティングご提案資料（2026年5月14日）／初回ヒアリングMTG議事録<br>
+    作成：GMO TECH株式会社
+  </footer>
+
+</div>
+
+<script>
+function showTab(index, btn){
+  document.querySelectorAll('.panel').forEach(function(p, i){
+    p.classList.toggle('active', i === index);
+  });
+  document.querySelectorAll('nav.tabs button').forEach(function(b){
+    b.classList.remove('active');
+  });
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
